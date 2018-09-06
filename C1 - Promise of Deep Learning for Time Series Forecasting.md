@@ -1,14 +1,11 @@
 # Promise of Deep Learning for Time Series Forecasting
-- Deep learning neural networks are able to automatically learn arbitrary complex mappings from
-inputs to outputs
+- Deep learning neural networks are able to automatically learn arbitrary complex mappings from inputs to outputs
 
 ## After reading this tutorial, you will know:
 - The focus and implicit, if not explicit, limitations on classical time series forecasting
 methods.
-- The general capabilities of Multilayer Perceptrons and how they may be harnessed for
-time series forecasting.
-- The added capabilities of feature learning and native support for sequences provided by
-Convolutional Neural Networks and Recurrent Neural Networks.
+- The general capabilities of Multilayer Perceptrons and how they may be harnessed for time series forecasting.
+- The added capabilities of feature learning and native support for sequences provided by Convolutional Neural Networks and Recurrent Neural Networks.
 
 #### Time Series Forecasting
 - Time series forecasting is difficult :P
@@ -18,11 +15,8 @@ Convolutional Neural Networks and Recurrent Neural Networks.
 
 ##### Limitations of Time Series Forecasting
 - Focus on complete data: missing or corrupt data is generally unsupported.
-- Focus on linear relationships: assuming a linear relationship excludes more complex
-joint distributions.
-- Focus on fixed temporal dependence: the relationship between observations at
-different times, and in turn the number of lag observations provided as input, must be
-diagnosed and specified.
+- Focus on linear relationships: assuming a linear relationship excludes more complex joint distributions.
+- Focus on fixed temporal dependence: the relationship between observations at different times, and in turn the number of lag observations provided as input, must be diagnosed and specified.
 - Focus on univariate data: many real-world problems have multiple input variables.
 - Focus on one-step forecasts: many real-world problems require forecasts with a long
 time horizon.
@@ -30,8 +24,7 @@ time horizon.
 #### Summary
 - Machine learning methods can be effective on more complex time series forecasting problems
 with multiple input variables, complex nonlinear relationships, and missing data. 
-- In order to perform well, these methods often require hand-engineered features prepared by either domain
-experts or practitioners with a background in signal processing.
+- In order to perform well, these methods often require hand-engineered features prepared by either domain experts or practitioners with a background in signal processing.
 
 
 #### Convolutional Neural Networks for Time Series
@@ -50,9 +43,7 @@ not offered by MLPs or CNNs.
 - Native Support for Sequences. Recurrent neural networks directly add support for
 input sequence data.
 - recurrent neural networks can also automatically learn the temporal dependence from the data
-- In the simplest case, the network is shown one observation at a time from a sequence and
-can learn what observations it has seen previously are relevant and how they are relevant to
-forecasting
+- In the simplest case, the network is shown one observation at a time from a sequence and can learn what observations it has seen previously are relevant and how they are relevant to forecasting
 - The model both learns a mapping from inputs to outputs and learns what context
 from the input sequence is useful for the mapping, and can dynamically change this context as
 needed.
