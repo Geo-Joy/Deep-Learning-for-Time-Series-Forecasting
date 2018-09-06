@@ -57,7 +57,6 @@ forecasting
 from the input sequence is useful for the mapping, and can dynamically change this context as
 needed.
 
-
 ### Promise of Deep Learning
 - Neural networks learn arbitrary mapping functions.
 - Neural networks may not require a scaled or stationary time series as input
@@ -66,3 +65,14 @@ needed.
 - Convolutional neural networks support efficient feature learning.
 - LSTM networks support efficient learning of temporal dependencies.
 - Hybrid models efficiently combine the diverse capabilities of different architectures.
+
+### Further Reading
+- [Deep Learning for Time-Series Analysis, 2017.](https://arxiv.org/abs/1701.01887)
+- [Neural Networks for Time Series Processing, 1996.](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.45.5697)
+- [Sequence to Sequence Learning with Neural Networks, 2014.](https://arxiv.org/abs/1409.3215)
+- [Applying LSTM to Time Series Predictable through Time-Window Approaches, 2001.](https://link.springer.com/chapter/10.1007/3-540-44668-0_93)
+- [Long Short Term Memory Networks for Anomaly Detection in Time Series, 2015.](https://www.elen.ucl.ac.be/Proceedings/esann/esannpdf/es2015-56.pdf)
+- [Convolutional Networks for Images, Speech, and Time-Series, 1998.](https://dl.acm.org/citation.cfm?id=303704)
+- [Deep Convolutional Neural Networks On Multichannel Time Series For Human Activity
+Recognition, 2015.](https://dl.acm.org/citation.cfm?id=2832806)
+
