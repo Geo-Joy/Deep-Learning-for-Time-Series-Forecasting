@@ -51,13 +51,13 @@ hot, cold, up, down, and buy, sell are categories.
 ### Unstructured vs. Structured
 - It is useful to plot each variable in a time series and inspect the plot looking for possible
 patterns.
-- Unstructured: No obvious systematic time-dependent pattern in a time series variable.
-- Structured: Systematic time-dependent patterns in a time series variable (e.g. trend
+- **Unstructured:** No obvious systematic time-dependent pattern in a time series variable.
+- **Structured:** Systematic time-dependent patterns in a time series variable (e.g. trend
 and/or seasonality).
 
 ### Univariate vs. Multivariate
-- Univariate: One variable measured over time.
-- Multivariate: Multiple variables measured over time.
+- **Univariate:** One variable measured over time.
+- **Multivariate:** Multiple variables measured over time.
 
 - you may have multiple variables as input to the model and only be
 interested in predicting one of the variables as output. In this case, there is an assumption in
@@ -65,20 +65,20 @@ the model that the multiple input variables aid and are required in predicting t
 variable.
 
 ### Single-step vs. Multi-step
-- One-step: Forecast the next time step.
-- Multi-step: Forecast more than one future time steps.
+- **One-step**: Forecast the next time step.
+- **Multi-step**: Forecast more than one future time steps.
 
 - The more time steps to be projected into the future, the more
 challenging the problem given the compounding nature of the uncertainty on each forecasted
 time step.
 
 ### Static vs. Dynamic
-- Static. A forecast model is fit once and used to make predictions.
-- Dynamic. A forecast model is fit on newly available data prior to each prediction.
+- **Static:** A forecast model is fit once and used to make predictions.
+- **Dynamic:** A forecast model is fit on newly available data prior to each prediction.
 
 ### Contiguous vs. Discontiguous
-- Contiguous. Observations are made uniform over time.
-- Discontiguous. Observations are not uniform over time.
+- **Contiguous:** Observations are made uniform over time.
+- **Discontiguous:** Observations are not uniform over time.
 
 - The lack of uniformity of the observations may be caused by missing
 or corrupt values.
