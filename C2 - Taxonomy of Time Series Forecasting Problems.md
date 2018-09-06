@@ -90,9 +90,8 @@ to make the observations uniform over time.
 
 ### Further Reading
 
-[Machine Learning Strategies for Time Series Forecasting, 2013.](http://link.springer.com/chapter/10.1007%2F978-3-642-36318-4_3)
-
-[Recursive and direct multi-step forecasting: the best of both worlds, 2012.](https://econpapers.repec.org/paper/mshebswps/2012-19.htm)
+- [Machine Learning Strategies for Time Series Forecasting, 2013.](http://link.springer.com/chapter/10.1007%2F978-3-642-36318-4_3)
+- [Recursive and direct multi-step forecasting: the best of both worlds, 2012.](https://econpapers.repec.org/paper/mshebswps/2012-19.htm)
 
 
 
