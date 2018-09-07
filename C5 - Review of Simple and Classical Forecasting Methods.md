@@ -48,8 +48,88 @@ An extension to ARIMA that supports the direct modeling of the seasonal componen
 - **Q:** Seasonal moving average order.
 - **m:** The number of time steps for a single seasonal period.
 > SARIMA(p,d,q)(P,D,Q)m
+- m parameter influences the P , D, and Q parameters.
 
+For example:
+- m of 12 for monthly data suggests a yearly seasonal cycle.
+- P = 1 would make use of the first seasonally offset observation in the model, e.g. t − (m × 1) or t − 12.
+- P = 2, would use the last two seasonally offset observations t − (m × 1), t − (m × 2).
+- D of 1 would calculate a first order seasonal difference.
+- Q = 1 would use a first order errors in the model
 
+## Exponential Smoothing Methods
+- Exponential smoothing is a time series forecasting method for univariate data\
+- Prediction is a weighted sum of past observations
+- Exponential smoothing methods may be considered as peers and an alternative to the popular Box-Jenkins ARIMA class of methods
+- Sometimes referred to as ETS models, referring to the explicit modeling of Error, Trend and Seasonality
 
+### Single Exponential Smoothing
+- SES for short, also called Simple Exponential Smoothing, is a time series forecasting method for univariate data without a trend or seasonality.
+- It requires a single parameter, called alpha (a or α), also called the smoothing factor or smoothing coefficient
+- Alpha is often set to a value between 0 and 1
+- Alpha value close to 1 indicates fast learning (that is, only the most recent values influence the forecasts)
+- Alpha value close to 0 indicates slow learning (past observations have a large influence on forecasts)
+
+ - **Alpha (α):** Smoothing factor for the level.
+ 
+### Double Exponential Smoothing
+- Explicitly adds support for trends in the univariate time series
+- An additional smoothing factor is added to control the decay of the influence of the change in trend called beta (b or β)
+- supports trends that change in different ways: an additive and a multiplicative
+- Double Exponential Smoothing with an additive trend is classically referred to as Holt’s linear trend model (Charles Holt)
+
+- **Additive Trend:** Double Exponential Smoothing with a linear trend.
+- **Multiplicative Trend:** Double Exponential Smoothing with an exponential trend.
+
+For longer range (multi-step) forecasts, the trend may continue on unrealistically. As such, it can be useful to dampen the trend over time. Dampening means reducing the size of the trend over future time steps down to a straight line (no trend).
+
+- **Additive Dampening:** Dampen a trend linearly.
+- **Multiplicative Dampening:** Dampen the trend exponentially.
+
+#### Hyperparameters:
+- **Alpha (α):** Smoothing factor for the level.
+- **Beta (β):** Smoothing factor for the trend.
+- **Trend Type:** Additive or multiplicative.
+- **Dampen Type:** Additive or multiplicative.
+- **Phi (φ):** Damping coefficient.
+
+### Triple Exponential Smoothing
+- Triple Exponential Smoothing is an extension of Exponential Smoothing that explicitly adds support for seasonality to the univariate time series. 
+- This method is sometimes called Holt-Winters Exponential Smoothing, named for two contributors to the method: Charles Holt and Peter Winters.
+- gamma (g or γ) that controls the influence on the seasonal component.
+
+- **Additive Seasonality:** Triple Exponential Smoothing with a linear seasonality.
+- **Multiplicative Seasonality:** Triple Exponential Smoothing with an exponential seasonality
+
+- Triple exponential smoothing is the most advanced variation of exponential smoothing and through configuration, it can also develop double and single exponential smoothing models.
+
+- Additionally, to ensure that the seasonality is modeled correctly, the number of time steps in a seasonal period (Period) must be specified. For example, if the series was monthly data and the seasonal period repeated each year, then the Period=12.
+
+#### Hyperparameters:
+- **Alpha (α):** Smoothing factor for the level.
+- **Beta (β):** Smoothing factor for the trend.
+- **Trend Type:** Additive or multiplicative.
+- **Dampen Type:** Additive or multiplicative.
+- **Phi (φ):** Damping coefficient.
+- **Gamma (γ):** Smoothing factor for the seasonality.
+- **Seasonality Type:** Additive or multiplicative.
+- **Period:** Time steps in seasonal period.
+
+### Further Reading
+#### Simple Methods
+- [Chapter 2, The forecaster’s toolbox, Forecasting: Principles and Practice, 2013.](https://amzn.to/2xlJsfV)
+- [Forecasting, Wikipedia.](https://en.wikipedia.org/wiki/Forecasting)
+
+#### Autoregressive Methods
+- [Chapter 8, ARIMA models, Forecasting: Principles and Practice, 2013.](https://amzn.to/2xlJsfV)
+- [Chapter 7, Non-stationary Models, Introductory Time Series with R, 2009.](https://amzn.to/2smB9LR)
+- [Autoregressive integrated moving average on Wikipedia.](https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average)
+
+#### Exponential Smoothing
+- [Chapter 7, Exponential smoothing, Forecasting: Principles and Practice, 2013.](https://amzn.to/2xlJsfV)
+- [Section 6.4. Introduction to Time Series Analysis, Engineering Statistics Handbook, 2012.](https://www.itl.nist.gov/div898/handbook/)
+- [Practical Time Series Forecasting with R, 2016.](https://amzn.to/2LGKzKm)
+- [Exponential smoothing, Wikipedia.](https://en.wikipedia.org/wiki/Exponential_smoothing)
+ 
 
 
