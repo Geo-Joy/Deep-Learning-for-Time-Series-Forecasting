@@ -17,3 +17,39 @@ Three properties of a good technique for making a naive forecast are:
 - Fast: A method that is fast to implement and computationally trivial to make a prediction.
 - Repeatable: A method that is [deterministic](https://g.co/kgs/2LmQcr), meaning that it produces an expected output given the same input.
 
+
+## Autoregressive Methods
+Autoregressive Integrated Moving Average, or ARIMA, is one of the most widely used forecasting methods for univariate time series data forecasting.
+- Can handle data with a trend
+- Does not support time series with a seasonal component
+
+An extension to ARIMA that supports the direct modeling of the seasonal component of the series is called SARIMA
+
+### Autoregressive Integrated Moving Average Model
+- Is a class of statistical models for analyzing and forecasting time series data
+
+- **AR:** Autoregression. A model that uses the dependent relationship between an observation and some number of lagged observations.
+- **I:** Integrated. The use of differencing of raw observations (e.g. subtracting an observation from an observation at the previous time step) in order to make the time series stationary.
+- **MA:** Moving Average. A model that uses the dependency between an observation and a residual error from a moving average model applied to lagged observations.
+> ARIMA(p,d,q)
+
+### Seasonal ARIMA
+- It is an extension of ARIMA that explicitly supports univariate time series data with a seasonal component
+- Configuring a SARIMA requires selecting hyperparameters for both the trend and seasonal elements of the series.
+
+#### Trend Elements
+- **p:** Trend autoregression order.
+- **d:** Trend difference order.
+- **q:** Trend moving average order.
+
+#### Seasonal Elements
+- **P:** Seasonal autoregressive order.
+- **D:** Seasonal difference order.
+- **Q:** Seasonal moving average order.
+- **m:** The number of time steps for a single seasonal period.
+> SARIMA(p,d,q)(P,D,Q)m
+
+
+
+
+
