@@ -1,3 +1,5 @@
+Sorry for the delay - will try to update the repo soon.
+
 # Deep-Learning-for-Time-Series-Forecasting
 
 References From The Folowing Books/Tutorials/Experts
